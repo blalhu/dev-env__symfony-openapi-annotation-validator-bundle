@@ -11,6 +11,15 @@
     "autoload-dev": {
         "files": [ "vendor/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php" ]
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../repo/",
+            "options": {
+                "symlink": false
+            }
+        }
+    ],
     "require": {
         "php": ">=5.3.9",
         "doctrine/doctrine-bundle": "~1.4",
@@ -22,7 +31,8 @@
         "symfony/monolog-bundle": "^3.0.2",
         "symfony/swiftmailer-bundle": "~2.3,>=2.3.10",
         "symfony/symfony": "2.7.*",
-        "twig/twig": "^1.0||^2.0"
+        "twig/twig": "^1.0||^2.0",
+        "pelso/openapi-validator-bundle": "*"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3",
@@ -61,5 +71,6 @@
         "branch-alias": {
             "dev-master": "2.7-dev"
         }
-    }
+    },
+    "minimum-stability": "dev"
 }

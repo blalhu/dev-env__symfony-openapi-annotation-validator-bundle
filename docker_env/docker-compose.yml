@@ -33,7 +33,9 @@ services:
     command: [ "php", "-S", "0.0.0.0:8000", "-t", "web" ]
   php56:
     image: pelso/php-dev-xdebug:5.6
-    volumes: [ ../symfony27/:/home/app/docroot ]
+    volumes:
+      - ../symfony27/:/home/app/docroot
+      - ../../src/:/home/app/repo
     ports: [ 8056:8000, 8027:8000, 8002:8000 ]
     user: root
     command: [ "app/console", "server:run", "0.0.0.0:8000" ]
