@@ -14,4 +14,5 @@ return [
     Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle::class => ['all' => true],
     Symfony\Bundle\TwigBundle\TwigBundle::class => ['all' => true],
     Symfony\Bundle\WebServerBundle\WebServerBundle::class => ['dev' => true],
+    Pelso\OpenAPIValidatorBundle\PelsoOpenAPIValidatorBundle::class => ['all' => true],
 ];

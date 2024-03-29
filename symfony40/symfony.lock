@@ -42,6 +42,9 @@
             "migrations/.gitignore"
         ]
     },
+    "pelso/openapi-validator-bundle": {
+        "version": "dev-main"
+    },
     "phpunit/phpunit": {
         "version": "7.5",
         "recipe": {

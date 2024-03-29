@@ -4,7 +4,7 @@
     "license": "MIT",
     "description": "A skeleton to start a new Symfony website",
     "require": {
-        "php": "^7.1.3",
+        "php": "^7.3.0",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "doctrine/annotations": "^1.0",
@@ -31,7 +31,8 @@
         "symfony/twig-bundle": "4.0.*",
         "symfony/validator": "4.0.*",
         "symfony/web-link": "4.0.*",
-        "symfony/yaml": "4.0.*"
+        "symfony/yaml": "^v4.4.18",
+        "pelso/openapi-validator-bundle": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "^7.5",
@@ -63,6 +64,15 @@
             "App\\Tests\\": "tests/"
         }
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../repo/",
+            "options": {
+                "symlink": false
+            }
+        }
+    ],
     "replace": {
         "paragonie/random_compat": "2.*",
         "symfony/polyfill-ctype": "*",
@@ -92,5 +102,6 @@
             "require": "4.0.*",
             "docker": false
         }
-    }
+    },
+    "minimum-stability": "dev"
 }

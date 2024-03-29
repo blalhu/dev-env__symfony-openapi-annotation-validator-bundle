@@ -3,39 +3,41 @@ version: '3.8'
 services:
   php83:
     image: pelso/php-dev-xdebug:8.3
-    volumes: [ ../symfony70/:/home/app/docroot ]
+    volumes:
+      - ../symfony70/:/home/app/docroot
+      - ../../src/:/home/app/repo
     ports: [ 8083:8000, 8007:8000 ]
     user: root
     command: [ "php", "-S", "0.0.0.0:8000", "-t", "public" ]
   php80:
     image: pelso/php-dev-xdebug:8.0
-    volumes: [ ../symfony60:/home/app/docroot ]
+    volumes:
+      - ../symfony60:/home/app/docroot
+      - ../../src/:/home/app/repo
     ports: [ 8080:8000, 8006:8000 ]
+    user: root
+    command: [ "php", "-S", "0.0.0.0:8000", "-t", "public" ]
+  php74:
+    image: pelso/php-dev-xdebug:7.4
+    volumes:
+      - ../symfony50/:/home/app/docroot
+      - ../../src/:/home/app/repo
+    ports: [ 8072:8000, 8005:8000 ]
+    user: root
+    command: [ "php", "-S", "0.0.0.0:8000", "-t", "public" ]
+  php73:
+    image: pelso/php-dev-xdebug:7.3
+    volumes:
+      - ../symfony40/:/home/app/docroot
+      - ../../src/:/home/app/repo
+    ports: [ 8071:8000, 8004:8000 ]
     user: root
     command: [ "php", "-S", "0.0.0.0:8000", "-t", "public" ]
   php72:
     image: pelso/php-dev-xdebug:7.2
-    volumes: [ ../symfony50/:/home/app/docroot ]
-    ports: [ 8072:8000, 8005:8000 ]
-    user: root
-    command: [ "php", "-S", "0.0.0.0:8000", "-t", "public" ]
-  php71:
-    image: pelso/php-dev-xdebug:7.1
-    volumes: [ ../symfony40/:/home/app/docroot ]
-    ports: [ 8071:8000, 8004:8000 ]
-    user: root
-    command: [ "php", "-S", "0.0.0.0:8000", "-t", "public" ]
-  php70:
-    image: pelso/php-dev-xdebug:7.0
-    volumes: [ ../symfony31/:/home/app/docroot ]
+    volumes:
+      - ../symfony34/:/home/app/docroot
+      - ../../src/:/home/app/repo
     ports: [ 8070:8000, 8003:8000 ]
     user: root
     command: [ "php", "-S", "0.0.0.0:8000", "-t", "web" ]
-  php56:
-    image: pelso/php-dev-xdebug:5.6
-    volumes:
-      - ../symfony27/:/home/app/docroot
-      - ../../src/:/home/app/repo
-    ports: [ 8056:8000, 8027:8000, 8002:8000 ]
-    user: root
-    command: [ "app/console", "server:run", "0.0.0.0:8000" ]

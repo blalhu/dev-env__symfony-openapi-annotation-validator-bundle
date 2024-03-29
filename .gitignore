@@ -2,7 +2,7 @@
 !/.gitignore
 !/docker_env
 !/symfony27
-!/symfony31
+!/symfony34
 !/symfony40
 !/symfony50
 !/symfony60
