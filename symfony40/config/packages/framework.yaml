@@ -15,6 +15,11 @@ framework:
         log: true
 
 pelso_open_api_validator_bundle:
+    openapi_provider_list:
+        - name: autoloaded_service
+          service: 'App\OpenAPIProvider\AutoloadedProviderChecker'
+        - name: manual_service
+          service: '@app.provider.manual'
     openapi_yaml_list:
         - name: default
           uri: '%kernel.root_dir%/../src/Resources/basic_openapi_sample.yaml'
