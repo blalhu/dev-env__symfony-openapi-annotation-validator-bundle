@@ -23,3 +23,11 @@ pelso_open_api_validator_bundle:
     openapi_yaml_list:
         - name: default
           uri: '%kernel.root_dir%/../src/Resources/basic_openapi_sample.yaml'
+        - name: profile_demo
+          uri: '%kernel.project_dir%/src/Resources/profile_openapi.yaml'
+    profiles:
+        - profile_name: strict
+          provider_name: profile_demo
+          error_actions:
+              - '@pelso.openapi_validator_bundle.error_action.log'
+              - '@pelso.openapi_validator_bundle.error_action.bad_request_response'

@@ -10,7 +10,6 @@ class AutoloadedProviderChecker extends YAMLFileOpenAPIProvider implements OpenA
 
     public function __construct()
     {
-        dump(self::class);
         parent::__construct(__DIR__.'/../Resources/basic_openapi_sample.yaml');
     }
 
